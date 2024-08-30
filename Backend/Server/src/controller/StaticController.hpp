@@ -3,10 +3,8 @@
 #include "oatpp/core/macro/codegen.hpp"
 #include "oatpp/core/macro/component.hpp"
 #include "oatpp/web/protocol/http/outgoing/BufferBody.hpp"
-#include <iostream>
 #include <fstream>
 #include <sstream>
-#include <chrono>
 
 namespace microTube {
     namespace apicontroller {
