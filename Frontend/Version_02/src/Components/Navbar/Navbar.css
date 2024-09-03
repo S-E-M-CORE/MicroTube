@@ -1,0 +1,65 @@
+
+nav{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: #fff;
+    position: sticky;
+    top: 0;                 /* sorgt dafür das die Navbar bei srollen oben bleibt*/
+    z-index: 10;
+}
+
+
+.nav-left .menu-Icon{
+    width: 35px;
+    margin-right: 20px;
+}
+
+.nav-left .Logo{
+    width: 130px;
+}
+
+.search-box .nav-Search{
+    margin-left: 10px;
+    width : 80%;
+}
+
+.nav-middle .search-box{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 25px;
+}
+
+.nav-middle .Search Input {
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+
+}
+
+
+.nav-middle .search-box img {
+
+    width: 20px;
+
+}
+
+.nav-right img {
+    width: 25px;
+    margin-right: 25px;
+}
+
+.nav-right .nav-bell {
+width: 35px;
+border-radius: 50%;
+}
+
+.nav-right .nav-Profile
+{
+    width: 35px;
+    border-radius: 50%;
+}
+
+
