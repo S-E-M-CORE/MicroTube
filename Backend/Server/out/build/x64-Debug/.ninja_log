@@ -1,0 +1,21 @@
+# ninja log v5
+6	2626	7518961701046829	CMakeFiles/MicroTubeServer.dir/src/App.cpp.obj	1e321baeed28988b
+2	2628	7518961701046829	CMakeFiles/MicroTubeLib.dir/src/App.cpp.obj	d5d67c070accd1fe
+2628	2744	7518961702067976	MicroTubeLib.lib	136a15242f50d047
+2744	4034	7518961714751568	C:/repositories/MicroTube/Backend/Server/bin/MicroTubeServer.exe	4d8ae5826d0c66a3
+3	1615	7518992204152094	CMakeFiles/MicroTubeLib.dir/src/App.cpp.obj	d5d67c070accd1fe
+6	1621	7518992204162096	CMakeFiles/MicroTubeServer.dir/src/App.cpp.obj	1e321baeed28988b
+1616	1723	7518992205244080	MicroTubeLib.lib	136a15242f50d047
+1723	2042	7518992208005763	C:/repositories/MicroTube/Backend/Server/bin/MicroTubeServer.exe	4d8ae5826d0c66a3
+6	1588	7519002256671793	CMakeFiles/MicroTubeServer.dir/src/App.cpp.obj	1e321baeed28988b
+3	1598	7519002256762044	CMakeFiles/MicroTubeLib.dir/src/App.cpp.obj	d5d67c070accd1fe
+1598	1661	7519002257389423	MicroTubeLib.lib	136a15242f50d047
+1661	2078	7519002260914892	C:/repositories/MicroTube/Backend/Server/bin/MicroTubeServer.exe	4d8ae5826d0c66a3
+24	1474	7519002441425090	CMakeFiles/MicroTubeServer.dir/src/App.cpp.obj	1e321baeed28988b
+21	1490	7519002441585313	CMakeFiles/MicroTubeLib.dir/src/App.cpp.obj	d5d67c070accd1fe
+1490	1536	7519002442007291	MicroTubeLib.lib	136a15242f50d047
+1536	1717	7519002443516749	C:/repositories/MicroTube/Backend/Server/bin/MicroTubeServer.exe	4d8ae5826d0c66a3
+19	1822	7519011059753566	CMakeFiles/MicroTubeLib.dir/src/App.cpp.obj	d5d67c070accd1fe
+24	1828	7519011059818638	CMakeFiles/MicroTubeServer.dir/src/App.cpp.obj	1e321baeed28988b
+1823	1876	7519011060300003	MicroTubeLib.lib	136a15242f50d047
+1876	2225	7519011063239397	C:/repositories/MicroTube/Backend/Server/bin/MicroTubeServer.exe	4d8ae5826d0c66a3

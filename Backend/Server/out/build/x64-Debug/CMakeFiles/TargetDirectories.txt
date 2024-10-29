@@ -1,0 +1,4 @@
+C:/repositories/MicroTube/Backend/Server/out/build/x64-Debug/CMakeFiles/MicroTubeLib.dir
+C:/repositories/MicroTube/Backend/Server/out/build/x64-Debug/CMakeFiles/MicroTubeServer.dir
+C:/repositories/MicroTube/Backend/Server/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/repositories/MicroTube/Backend/Server/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

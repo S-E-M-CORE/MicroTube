@@ -26,6 +26,15 @@ namespace microTube {
                     return std::make_shared<VideoController>(objectMapper);
                 }
 
+                ENDPOINT_ASYNC("GET", "/api/v1/video/stream/{filename}", GetVideoStream) {
+                    ENDPOINT_ASYNC_INIT(GetVideoStream);
+
+                    Action act() override {
+
+                        return _return(controller->createResponse(Status::CODE_501));
+                    }
+                };
+
                 ENDPOINT_INFO(GetVideoStream) {
                     info->summary = "Stream video file";
                     info->description = "Streams a video file to the client using asynchronous processing. "
@@ -40,24 +49,6 @@ namespace microTube {
                     info->addTag("Video");
                     info->addTag("Unimplemented");
                 }
-
-                ENDPOINT_ASYNC("GET", "/api/v1/video/stream/{filename}", GetVideoStream) {
-                    ENDPOINT_ASYNC_INIT(GetVideoStream);
-
-                    Action act() override {
-                        auto filename = request->getPathVariable("filename");
-                        oatpp::String filePath = "path/to/videos/" + filename;
-                        auto fileStream = std::make_shared<std::ifstream>(filePath->c_str(), std::ios::binary);
-
-                        if (!fileStream->is_open()) {
-                            return _return(controller->createResponse(Status::CODE_404, "Video not found"));
-                        }
-
-                        auto response = controller->createResponse(Status::CODE_501);
-                        response->putHeader("Content-Type", "text/plain"); // Adjust content type according to the video format
-                        return _return(response);
-                    }
-                };
 
                 ENDPOINT_ASYNC("GET", "/api/v1/video/info/{filename}", GetVideoInfo) {
                     ENDPOINT_ASYNC_INIT(GetVideoInfo);

@@ -5,6 +5,7 @@
 #include "AppComponent.hpp"
 #include "controller/StaticController.hpp"
 #include "controller/VideoController.hpp"
+#include "controller/UserController.hpp"
 #include "oatpp-swagger/Controller.hpp"
 #include "oatpp/network/Server.hpp"
 #include <iostream>
@@ -14,27 +15,26 @@ namespace microTube {
         void run(void) {
             constexpr const char* const logName = microTube::constants::defaultLogName;
 
-            /* Register Components in scope of run() method */
             microTube::component::AppComponent components{};
 
-            /* Get router component */
             OATPP_COMPONENT(std::shared_ptr<oatpp::web::server::HttpRouter>, router);
 
-            /* Create StaticController and add all of its endpoints to router */
-            router->addController(std::make_shared<microTube::apicontroller::static_endpoint::StaticController>());
+            // Endpoint controllers
+            auto staticController = microTube::apicontroller::static_endpoint::StaticController::createShared();
+            auto userController = microTube::apicontroller::user_endpoint::UserController::createShared();
+            auto videoController  = microTube::apicontroller::video_endpoint ::VideoController ::createShared();
 
-            router->addController(std::make_shared<microTube::apicontroller::video_endpoint::VideoController>());
+            router->addController(staticController);
+            router->addController(userController);
+            router->addController(videoController);
 
             if (microTube::constants::useSwaggerUi)
             {
-                /* Swagger UI Endpoint documentation */
-                oatpp::web::server::api::Endpoints docEndpoints;
-
-                docEndpoints.append(router->addController(microTube::apicontroller::static_endpoint::StaticController::createShared())->getEndpoints());
-
-                docEndpoints.append(router->addController(microTube::apicontroller::video_endpoint::VideoController::createShared())->getEndpoints());
-
-                router->addController(oatpp::swagger::Controller::createShared(docEndpoints));
+                oatpp::web::server::api::Endpoints docEndpoints{};
+                docEndpoints.append(staticController->getEndpoints());
+                docEndpoints.append(userController  ->getEndpoints());
+                docEndpoints.append(videoController ->getEndpoints());
+                router->addController(oatpp::swagger::Controller::createShared(std::move(docEndpoints)));
             }
 
             /* Get connection handler component */
@@ -56,10 +56,9 @@ namespace microTube {
                 if(microTube::constants::useSwaggerUi)
                     OATPP_LOGI(logName, "Swagger-ui at http://%s:%s/swagger/ui", host, port);
             }
-            /* Run server */
-            server.run();
 
-        } // run()
+            server.run();
+        }
     } // namespace main
 } // namespace microTube
 
