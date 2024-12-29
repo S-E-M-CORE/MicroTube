@@ -33,9 +33,13 @@ cd build\
 cmake .. -DOATPP_SQLITE_AMALGAMATION=ON
 cmake --build . --target INSTALL
 
+cd ..
+cd ..
+
 git clone https://github.com/S-E-M-CORE/MicroTube.git
-cd Primus
-cd PrimusSvr
+cd MicroTube
+cd Backend
+cd Server
 mkdir build
 cd build\
 
