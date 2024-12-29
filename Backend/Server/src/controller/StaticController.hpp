@@ -1,21 +1,17 @@
-#include "dto/StatusDTO.hpp"
+#ifndef STATIC_CONTROLLER_HPP
+#define STATIC_CONTROLLER_HPP
+
 #include "oatpp/web/server/api/ApiController.hpp"
-#include "oatpp/core/macro/codegen.hpp"
-#include "oatpp/core/macro/component.hpp"
+#include "oatpp/macro/codegen.hpp"
+#include "oatpp/macro/component.hpp"
 #include "oatpp/web/protocol/http/outgoing/BufferBody.hpp"
 #include <fstream>
 #include <sstream>
 
 namespace microTube {
     namespace apicontroller {
-        namespace static_endpoint {
 
 #include OATPP_CODEGEN_BEGIN(ApiController)
-            //  ____  _        _   _       ____            _             _ _           
-            // / ___|| |_ __ _| |_(_) ___ / ___|___  _ __ | |_ _ __ ___ | | | ___ _ __ 
-            // \___ \| __/ _` | __| |/ __| |   / _ \| '_ \| __| '__/ _ \| | |/ _ \ '__|
-            //  ___) | || (_| | |_| | (__| |__| (_) | | | | |_| | | (_) | | |  __/ |   
-            // |____/ \__\__,_|\__|_|\___|\____\___/|_| |_|\__|_|  \___/|_|_|\___|_|   
             class StaticController : public oatpp::web::server::api::ApiController
             {
             public:
@@ -32,86 +28,84 @@ namespace microTube {
                     return std::make_shared<StaticController>(objectMapper);
                 }
 
-                ENDPOINT("GET", "/web/*", files,
-                    REQUEST(std::shared_ptr<IncomingRequest>, request))
-                {
-                    // Ignore query parameters if present
-                    auto pathTail = request->getPathTail();
-                    auto queryPos = pathTail->find("?");
-                    if (queryPos != std::string::npos) {
-                        pathTail = pathTail->substr(0, queryPos);
-                    }
-
-                    std::string filePath(WEB_CONTENT_DIRECTORY);
-                    filePath.append("/");
-
-                    if (pathTail->empty()) {
-                        filePath.append("index.html");
-                    }
-                    else {
-                        filePath.append(*pathTail);
-                    }
-
-                    std::ifstream file(filePath, std::ios::binary);
-                    if (file.good()) {
-                        std::ostringstream content;
-                        content << file.rdbuf();
-                        file.close();
-
-                        return createResponse(Status::CODE_200, content.str());
-                    }
-                    else {
-                        auto status = microTube::dto::StatusDto::createShared();
-
-                        std::string verboseMessage = "File at \"";
-                        verboseMessage.append(filePath.c_str());
-                        verboseMessage.append("\" could not be found");
-
-                        status->code = 404;
-                        status->message = verboseMessage;
-                        status->status = "NOT FOUND";
-                        return createDtoResponse(Status::CODE_404, status);
-                    }
-                }
-
                 ENDPOINT_INFO(files)
                 {
-                    info->name = "files";
-                    info->summary = "Serve static files";
-                    info->description = "This endpoint serves static files from the '/web' directory.";
-                    info->path = "/web/*";
-                    info->method = "GET";
-                    info->addTag("Static");
-                    info->pathParams["*"].description = "File path relative to the '/web' directory";
-                    info->addResponse<String>(Status::CODE_200, "text/html");
-                    info->addResponse<Object<microTube::dto::StatusDto>>(Status::CODE_404, "application/json");
+                    info->summary = "Serve static web files";
+                    info->description = "This endpoint serves static files from the server's web folder. If no file path is provided, the server returns the `index.html` file. The file path can be specified as part of the URL. Query parameters are ignored.";
+
+                    info->addResponse<String>(Status::CODE_200, "text/html")
+                        .description = "Successfully served the requested static file.";
+                    info->addResponse<String>(Status::CODE_404, "text/plain")
+                        .description = "Not Found: The requested file could not be found.";
+
+                    info->addTag("Web");
                 }
-
-
-                ENDPOINT("GET", "/", root,
-                    REQUEST(std::shared_ptr<IncomingRequest>, request))
+                ENDPOINT_ASYNC("GET", "web/*", files)
                 {
-                    auto response = createResponse(Status::CODE_302, "Redirect");
-                    response->putHeader("Location", "/web/");
+                    ENDPOINT_ASYNC_INIT(files)
 
-                    return response;
-                }
+                        Action act() override
+                    {
+                        // Ignore query parameters if present
+                        oatpp::String       pathTail = request->getPathTail();
+                        const std::size_t   queryPos = pathTail->find("?");
+
+                        if (queryPos != std::string::npos)
+                        {
+                            pathTail = pathTail->substr(0, queryPos);
+                        }
+
+                        std::string filePath(WEB_FOLDER);
+                        filePath.append("/");
+
+                        if (pathTail->empty())  filePath.append("index.html");
+                        else                    filePath.append(*pathTail);
+
+                        std::ifstream file(filePath, std::ios::binary);
+                        if (file.good())
+                        {
+                            std::ostringstream content;
+                            content << file.rdbuf();
+                            file.close();
+
+                            return _return(controller->createResponse(Status::CODE_200, content.str()));
+                        }
+                        else
+                        {
+                            const std::string& verboseMessage = std::string("File at \"") + filePath + "\" could not be found";
+                            return _return(controller->createResponse(Status::CODE_404, verboseMessage));
+                        }
+                    }
+                };
 
                 ENDPOINT_INFO(root)
                 {
-                    info->name = "root";
-                    info->summary = "Redirect to web directory";
-                    info->description = "This endpoint redirects requests to the root URL to the '/web' directory.";
-                    info->path = "/";
-                    info->addTag("Static");
-                    info->method = "GET";
-                    info->addResponse<String>(Status::CODE_302, "text/html");
-                }
+                    info->summary = "Redirect to web folder";
+                    info->description = "This endpoint redirects any request made to the root URL (`/`) to the `/web/` directory.";
 
+                    info->addResponse<String>(Status::CODE_302, "text/plain")
+                        .description = "Redirects the client to the `/web/` directory.";
+
+                    info->addTag("Web");
+                }
+                ENDPOINT_ASYNC("GET", "/", root)
+                {
+                    ENDPOINT_ASYNC_INIT(root);
+
+                    Action act() override
+                    {
+                        auto response = this->controller->createResponse(Status::CODE_302, "Redirect");
+                        response->putHeader("Location", "/web/");
+
+                        return _return(response);
+                    }
+                };
             };
 
 #include OATPP_CODEGEN_END(ApiController)
 
-        } // namespace static_endpoint
     } // namespace apicontroller
 } // namespace microTube
+
+
+#endif // STATIC_CONTROLLER_HPP
