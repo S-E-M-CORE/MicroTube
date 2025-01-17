@@ -1,0 +1,5 @@
+<map id="microTube::dto::ChannelInfoDTO" name="microTube::dto::ChannelInfoDTO">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,256,368"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="92,5,170,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,90,134,123,128,123,128,90"/>
+</map>

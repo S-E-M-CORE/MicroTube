@@ -1,0 +1,23 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,249,95,276"/>
+<area shape="rect" id="Node000001" href="$classmicroTube_1_1dto_1_1BearerTokenDTO.html" title=" " alt="" coords="155,5,372,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="52,233,61,190,77,138,103,86,120,62,141,42,159,30,162,35,144,46,124,66,107,89,82,140,66,192,57,234"/>
+<area shape="rect" id="Node000002" href="$classmicroTube_1_1dto_1_1ChannelInfoDTO.html" title=" " alt="" coords="157,56,371,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="56,234,67,201,85,162,109,124,141,93,161,81,164,85,144,97,113,128,90,165,72,202,61,235"/>
+<area shape="rect" id="Node000003" href="$classmicroTube_1_1dto_1_1InfoJsonDTO.html" title=" " alt="" coords="167,107,361,133"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="63,234,94,187,116,163,141,143,165,131,168,136,144,148,120,167,98,190,67,237"/>
+<area shape="rect" id="Node000004" href="$classmicroTube_1_1dto_1_1UserDatabaseEntry.html" title=" " alt="" coords="164,157,364,200"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="85,239,142,210,174,198,176,203,144,214,87,243"/>
+<area shape="rect" id="Node000005" href="$classmicroTube_1_1dto_1_1UserInfoDTO.html" title=" " alt="" coords="167,224,361,251"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="109,253,166,246,166,252,110,258"/>
+<area shape="rect" id="Node000006" href="$classmicroTube_1_1dto_1_1UserLoginDTO.html" title=" " alt="" coords="162,275,366,301"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="110,267,162,273,161,279,110,272"/>
+<area shape="rect" id="Node000007" href="$classmicroTube_1_1dto_1_1UserRegistrationDTO.html" title=" " alt="" coords="143,325,385,352"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="86,282,144,311,181,322,180,327,142,316,84,287"/>
+<area shape="rect" id="Node000008" href="$classmicroTube_1_1dto_1_1UserTokenPairDTO.html" title=" " alt="" coords="174,376,354,419"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="70,287,102,326,122,345,144,362,175,376,173,381,141,366,118,349,98,330,66,290"/>
+<area shape="rect" id="Node000009" href="$classmicroTube_1_1dto_1_1VideoInfoTransferDTO.html" title=" " alt="" coords="178,443,350,485"/>
+<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="62,290,73,323,91,360,114,397,144,429,179,447,177,452,141,433,110,400,86,363,68,325,57,292"/>
+<area shape="rect" id="Node000010" href="$classmicroTube_1_1dto_1_1VideoListDto.html" title=" " alt="" coords="168,509,360,536"/>
+<area shape="poly" id="edge10_Node000000_Node000010" title=" " alt="" coords="56,291,64,336,79,392,105,448,123,473,144,495,169,510,167,515,141,499,119,477,101,451,74,394,59,337,51,291"/>
+</map>

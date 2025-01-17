@@ -1,0 +1,17 @@
+<map id="VideoInfoTransferDTO.hpp" name="VideoInfoTransferDTO.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="268,5,445,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,155,177,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="335,35,128,149,126,145,332,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="200,155,318,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="335,35,308,55,284,81,271,111,264,140,259,139,266,109,279,79,305,51,332,30"/>
+<area shape="rect" id="Node000004" href="$InfoJsonDTO_8hpp.html" title=" " alt="" coords="294,80,418,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="359,33,359,64,354,64,354,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="342,155,568,181"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="380,30,408,51,433,79,447,109,455,139,449,140,442,111,429,81,404,55,377,35"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="592,155,804,181"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="386,30,656,146,654,151,384,35"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="311,110,153,153,151,148,309,105"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="341,109,289,148,286,143,338,105"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="375,105,427,143,424,148,372,109"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="417,105,624,148,623,154,416,110"/>
+</map>

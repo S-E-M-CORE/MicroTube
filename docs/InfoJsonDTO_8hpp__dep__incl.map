@@ -1,0 +1,32 @@
+<map id="InfoJsonDTO.hpp" name="InfoJsonDTO.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="350,5,474,32"/>
+<area shape="rect" id="Node000002" href="$DatabaseClient_8hpp.html" title=" " alt="" coords="176,80,312,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="370,41,274,82,272,77,368,36"/>
+<area shape="rect" id="Node000008" href="$VideoController_8hpp.html" title=" " alt="" coords="367,229,502,256"/>
+<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="490,26,539,44,561,59,579,79,585,93,586,108,575,138,556,165,540,183,505,211,468,231,465,226,502,207,537,179,552,162,570,136,580,107,580,94,575,81,558,63,537,49,488,31"/>
+<area shape="rect" id="Node000010" href="$VideoIndexer_8hpp.html" title=" " alt="" coords="404,155,526,181"/>
+<area shape="poly" id="edge16_Node000001_Node000010" title=" " alt="" coords="393,45,377,75,374,90,378,106,389,120,402,133,433,152,431,156,399,137,385,124,373,108,369,91,372,73,388,42"/>
+<area shape="rect" id="Node000012" href="$VideoInfoTransferDTO_8hpp.html" title=" " alt="" coords="387,80,564,107"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="435,42,467,78,463,81,431,46"/>
+<area shape="rect" id="Node000003" href="$DatabaseComponent_8hpp.html" title=" " alt="" coords="159,155,328,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="246,122,246,154,241,154,241,122"/>
+<area shape="rect" id="Node000006" href="$UserController_8hpp.html" title=" " alt="" coords="5,155,136,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="201,115,102,156,100,152,199,111"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="281,112,343,153,389,192,424,227,421,231,385,196,340,157,278,117"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="298,109,427,151,425,157,296,114"/>
+<area shape="rect" id="Node000004" href="$AppComponent_8hpp.html" title=" " alt="" coords="206,229,343,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="258,195,272,228,267,230,253,197"/>
+<area shape="rect" id="Node000005" href="$App_8cpp.html" title=" " alt="" coords="240,304,309,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="277,272,277,304,272,304,272,272"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="53,195,37,226,36,241,42,254,54,265,74,275,127,291,240,310,239,315,126,296,72,279,51,269,38,258,31,242,32,224,48,193"/>
+<area shape="rect" id="Node000007" href="$UserController_8cpp.html" title=" " alt="" coords="52,229,182,256"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="89,193,111,227,107,230,85,196"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="394,265,304,306,301,301,392,260"/>
+<area shape="rect" id="Node000009" href="$VideoController_8cpp.html" title=" " alt="" coords="367,304,502,331"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="437,272,437,304,432,304,432,272"/>
+<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="419,190,309,231,307,226,417,185"/>
+<area shape="poly" id="edge13_Node000010_Node000008" title=" " alt="" coords="456,197,442,230,437,228,451,195"/>
+<area shape="rect" id="Node000011" href="$VideoIndexer_8cpp.html" title=" " alt="" coords="527,229,649,256"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="501,187,568,226,565,231,498,192"/>
+<area shape="poly" id="edge18_Node000012_Node000010" title=" " alt="" coords="474,122,470,155,464,154,469,122"/>
+</map>

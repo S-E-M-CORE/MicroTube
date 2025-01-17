@@ -1,0 +1,11 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,55,107"/>
+<area shape="rect" id="Node000002" href="$App_8cpp.html#a13a43e6d814de94978c515cb084873b1" title=" " alt="" coords="103,80,142,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,91,87,91,87,96,55,96"/>
+<area shape="rect" id="Node000003" href="$classmicroTube_1_1apicontroller_1_1ChannelController.html#a3f3ad12ebed85df24d273b0d30a1c4cc" title=" " alt="" coords="190,5,408,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,80,189,58,206,51,208,56,191,62,144,85"/>
+<area shape="rect" id="Node000004" href="$classmicroTube_1_1apicontroller_1_1StaticController.html#a65b1903bbdc4efc10c311ee73c988ade" title=" " alt="" coords="197,72,401,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="143,91,181,91,181,96,143,96"/>
+<area shape="rect" id="Node000005" href="$classmicroTube_1_1apicontroller_1_1VideoController.html#ad71e00090296ad82b4167fc2dbed25e8" title=" " alt="" coords="198,139,401,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="144,101,191,124,208,131,206,136,189,129,141,106"/>
+</map>

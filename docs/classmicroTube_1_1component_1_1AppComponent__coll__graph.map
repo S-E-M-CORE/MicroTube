@@ -1,0 +1,7 @@
+<map id="microTube::component::AppComponent" name="microTube::component::AppComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="140,288,378,560"/>
+<area shape="rect" id="Node000002" href="$classmicrotube_1_1component_1_1DatabaseComponent.html" title=" " alt="" coords="5,5,254,224"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,223,198,272,193,274,173,225"/>
+<area shape="rect" id="Node000003" href="$classmicroTube_1_1component_1_1SwaggerComponent.html" title=" " alt="" coords="278,13,501,216"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="351,217,331,265,327,273,323,271,326,263,346,215"/>
+</map>
